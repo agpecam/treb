@@ -227,8 +227,8 @@ sub ts_regex($$;$$) {
 }
 
 # ts_range_regex('Jan 19 16:25:11', 'Jan 23 22:17:43') = '^Jan (19 (16:(25:(1[1-9]|[2-5])|2[6-9]|[3-5])|1[7-9]|2)|2[0-2]|23 (22:(17:([0-3]|4[0-3])|0|1[0-6])|[01]|2[01]))'
-#                                                          <----ts_regex(TS_LEFT, 'Jan 19 16:25:11', T_DAY)----->        <-ts_regex(TS_RIGHT, 'Jan 23 22:17:43', T_DAY)->
-#                                                                                                                 <---->
+#                                                              ^---ts_regex(TS_LEFT, 'Jan 19 16:25:11', T_DAY)--^        ^-ts_regex(TS_RIGHT, 'Jan 23 22:17:43', T_DAY)-^
+#                                                                                                                 ^----^
 #                                                                                        t_range_regex('Jan 20 00:00:00', 'Jan 22 23:59:59, T_DAY)
 sub ts_range_regex($$) {
 	my ($ts1, $ts2) = @_;
