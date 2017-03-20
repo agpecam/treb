@@ -1,6 +1,6 @@
 # treb - time range regular expression builder
 
-treb.pl is a small perl script that builds a regular expression for the time interval specified by two timestamps in the clog format (i.e. 'Mmm dd hh:mm:ss').
+treb.pl is a small perl script that builds a regular expression for time interval specified by two timestamps in clog format (i.e. 'Mmm dd hh:mm:ss').
 
 usage: treb.pl 'Jun 21 17:53:27' 'Aug 19 13:45:11'
 
